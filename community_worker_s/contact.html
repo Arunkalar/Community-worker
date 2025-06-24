@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Community Worker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Community Worker</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">Contact Us</h1>
+            <p class="page-subtitle fade-in-delay">Get in touch with us or connect directly with service providers</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-section slide-in-left">
+                    <h2>Send us a Message</h2>
+                    <p>Have questions, feedback, or need assistance? We'd love to hear from you!</p>
+                    
+                    <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="provider">Service Provider Question</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please describe your inquiry or feedback in detail..."></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-section slide-in-right">
+                    <div class="contact-info-card">
+                        <h3>Get in Touch</h3>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Address</h4>
+                                <p>123 Service Street<br>Community Plaza, Suite 456<br>City, State 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <small>Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-5PM</small>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>info@communityworker.com</p>
+                                <small>We respond within 24 hours</small>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 8:00 PM<br>
+                                   Saturday - Sunday: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h4>Follow Us</h4>
+                        <div class="social-links-contact">
+                            <a href="https://facebook.com/communityworker" class="social-link-item" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://twitter.com/communityworker" class="social-link-item" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://instagram.com/communityworker" class="social-link-item" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://linkedin.com/company/communityworker" class="social-link-item" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Providers Contact Section -->
+    <section class="providers-contact">
+        <div class="container">
+            <h2 class="section-title">Connect Directly with Service Providers</h2>
+            <p class="section-subtitle">Need immediate assistance? Contact our featured service providers directly</p>
+            
+            <div class="providers-contact-grid">
+                <div class="provider-contact-card hover-lift">
+                    <div class="provider-avatar">
+                        <img src="https://pixabay.com/get/g49be18a6d47869c83e108f67a980f48f2f1cdbf73ce2e5175725ba46916a5e31481465c6f30430ac8ab108548ae45f545bf23cd6901273e1a3be67750273f014_1280.jpg" alt="John Smith">
+                    </div>
+                    <div class="provider-details">
+                        <h3>John Smith</h3>
+                        <p class="provider-service"><i class="fas fa-bolt"></i> Licensed Electrician</p>
+                        <div class="provider-contact-info">
+                            <p><i class="fas fa-phone"></i> +1 (555) 101-2001</p>
+                            <p><i class="fas fa-envelope"></i> john@electricpro.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Downtown Area</p>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>5.0 (24 reviews)</span>
+                        </div>
+                        <a href="tel:+15551012001" class="btn btn-primary btn-small">Call Now</a>
+                    </div>
+                </div>
+
+                <div class="provider-contact-card hover-lift">
+                    <div class="provider-avatar">
+                        <img src="https://pixabay.com/get/g1d5d5a6db2fc20a07302087c671eab42f314f4c5c0906bcfc1215aa7cf6efa5873c6e0fb759710f500ff9b516cf3620c0f16eb70f66961577392bb1c958d2ff4_1280.jpg" alt="Sarah Wilson">
+                    </div>
+                    <div class="provider-details">
+                        <h3>Sarah Wilson</h3>
+                        <p class="provider-service"><i class="fas fa-wrench"></i> Master Plumber</p>
+                        <div class="provider-contact-info">
+                            <p><i class="fas fa-phone"></i> +1 (555) 101-2003</p>
+                            <p><i class="fas fa-envelope"></i> sarah@plumbpro.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Westside Area</p>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>5.0 (31 reviews)</span>
+                        </div>
+                        <a href="tel:+15551012003" class="btn btn-primary btn-small">Call Now</a>
+                    </div>
+                </div>
+
+                <div class="provider-contact-card hover-lift">
+                    <div class="provider-avatar">
+                        <img src="https://pixabay.com/get/g47dfe2de778ee9acaff4d46b2cca47eb0e181c71b7cd38f0b9e1939c683d17219f23ecaac64f3e34bcddfe051dc4125ec4553f31b4ce94e2aa7350a1b794daa2_1280.jpg" alt="Carlos Rodriguez">
+                    </div>
+                    <div class="provider-details">
+                        <h3>Carlos Rodriguez</h3>
+                        <p class="provider-service"><i class="fas fa-car"></i> Auto Mechanic</p>
+                        <div class="provider-contact-info">
+                            <p><i class="fas fa-phone"></i> +1 (555) 101-2005</p>
+                            <p><i class="fas fa-envelope"></i> carlos@autopro.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Central Area</p>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4.9 (35 reviews)</span>
+                        </div>
+                        <a href="tel:+15551012005" class="btn btn-primary btn-small">Call Now</a>
+                    </div>
+                </div>
+
+                <div class="provider-contact-card hover-lift">
+                    <div class="provider-avatar">
+                        <img src="https://pixabay.com/get/geeb20929f9348b198fd4e3926e7639ee0abe7e11912f9fe4b8fad342a371c3b1e5d32b7063610ec0f6fe7f104530ba2e322213b59eef078acefc885ffd050596_1280.jpg" alt="Robert Lee">
+                    </div>
+                    <div class="provider-details">
+                        <h3>Robert Lee</h3>
+                        <p class="provider-service"><i class="fas fa-hammer"></i> Carpenter</p>
+                        <div class="provider-contact-info">
+                            <p><i class="fas fa-phone"></i> +1 (555) 101-2007</p>
+                            <p><i class="fas fa-envelope"></i> robert@woodcraft.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Harbor Area</p>
+                        </div>
+                        <div class="provider-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>5.0 (19 reviews)</span>
+                        </div>
+                        <a href="tel:+15551012007" class="btn btn-primary btn-small">Call Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="services.html" class="btn btn-secondary">View All Providers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact">
+        <div class="container">
+            <div class="emergency-card">
+                <div class="emergency-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="emergency-content">
+                    <h3>Emergency Services</h3>
+                    <p>For urgent service needs outside business hours, call our emergency hotline</p>
+                    <a href="tel:+15551234567" class="btn btn-danger">
+                        <i class="fas fa-phone"></i> Emergency: +1 (555) 123-4567
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Community Worker</h3>
+                    <p>Connecting services to your doorstep with trust and reliability.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Electrical</a></li>
+                        <li><a href="#">Plumbing</a></li>
+                        <li><a href="#">Automotive</a></li>
+                        <li><a href="#">Home Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@communityworker.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Service St, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Community Worker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
