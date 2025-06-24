@@ -1,0 +1,43 @@
+Create a complete responsive website named **Community Worker** using only HTML, CSS, and JavaScript. This website is a service-based platform that connects service providers and users. It also has an admin dashboard (for future use) to store service, provider, and user information (only UI now).
+
+Create the following pages:
+
+1. **Home Page**
+   - Add a **Hero Section** with a full-width auto-scrolling slider (carousel) using multiple background images.
+   - Overlay the project name “Community Worker” and a short tagline like "Connecting Services to Your Doorstep" in bold, centered text.
+   - Include a sticky navigation menu with links: Home, Services, About, Contact.
+
+2. **Service Provider Page**
+   - Create multiple **responsive cards** like ID cards in a grid layout.
+   - Each card must include:
+     - Provider image (circular or rounded)
+     - Name
+     - Service name (e.g., Electrician, Plumber, Mechanic)
+     - Address
+     - Contact number
+   - Use hover effects to make cards interactive and attractive.
+
+3. **About Us Page**
+   - Add a well-designed section that explains the **purpose** of the Community Worker platform:
+     - Why it was created
+     - Who it helps (users and service providers)
+     - What problems it solves
+     - The goal/mission of the platform
+   - Include icons or simple illustrations for better presentation.
+
+4. **Contact Us Page**
+   - Create a **feedback form** that includes:
+     - Name
+     - Email
+     - Phone Number
+     - Message/Feedback
+   - Also, show a list/grid of service provider contact details to help clients connect.
+   - Make the form stylish and ensure basic form validation using JavaScript (e.g., check if fields are filled).
+
+📌 Design Instructions:
+- Use **clean, modern UI** with soft shadows, rounded corners, and proper spacing.
+- Use **Google Fonts** for typography.
+- Apply animations (e.g., fade-in, slide) for smooth user experience.
+- All pages should be **mobile responsive**.
+- Use only **HTML, CSS, and JavaScript** (no frameworks like Bootstrap).
+
